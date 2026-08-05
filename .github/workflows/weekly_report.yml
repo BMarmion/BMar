@@ -1,12 +1,8 @@
-name: 🛒 Purchase Intelligence — Rapport hebdo
+name: Purchase Intelligence - Rapport hebdo
 
 on:
   schedule:
-    # Tous les dimanches à 9h00 heure de Paris (UTC+1/+2)
-    # En été (CEST = UTC+2) → 7h UTC = 9h Paris
     - cron: "0 7 * * 0"
-
-  # Permet de lancer manuellement depuis GitHub → Actions → Run workflow
   workflow_dispatch:
 
 jobs:
@@ -23,23 +19,23 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Installer les dépendances
+      - name: Install dependencies
         run: pip install --quiet requests
 
-      - name: Vérifier les prix (toutes missions)
+      - name: Check prices
         env:
-          ANTHROPIC_API_KEY:    ${{ secrets.ANTHROPIC_API_KEY }}
-          TELEGRAM_BOT_TOKEN:   ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID:     ${{ secrets.TELEGRAM_CHAT_ID }}
-          PYTHONIOENCODING:     utf-8
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PYTHONIOENCODING: utf-8
         run: |
           cd procurement
           python tracker.py --all
 
-      - name: Sauvegarder l'historique des prix
+      - name: Save price history
         run: |
-          git config user.name  "Purchase Intelligence Bot"
-          git config user.email "bot@purchase-intelligence"
+          git config user.name "price-bot"
+          git config user.email "bot@noreply"
           git add procurement/data/*/price_history.json || true
-          git diff --cached --quiet || git commit -m "📈 Prix hebdo $(date +%Y-%m-%d)"
-          git push || echo "Rien à pusher"
+          git diff --cached --quiet || git commit -m "prix $(date +%Y-%m-%d)"
+          git push || echo "nothing to push"
