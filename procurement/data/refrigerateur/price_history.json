@@ -1,0 +1,110 @@
+{
+  "Liebherr CBNd 5723 Plus": {
+    "daily": {
+      "2026-08-05": {
+        "min": 949,
+        "typical": 1049
+      }
+    },
+    "checks": [
+      {
+        "date": "2026-08-05",
+        "typical": 1049,
+        "low": 949,
+        "notes": "Prix stable autour de 1050 EUR chez Darty/Boulanger. Destockage possible sur marketplace Amazon autour de 949 EUR. Modèle haut de gamme peu bradé.",
+        "trend": "stable",
+        "confidence": 35
+      }
+    ]
+  },
+  "LG GBB92MCBAP": {
+    "daily": {
+      "2026-08-05": {
+        "min": 699,
+        "typical": 789
+      }
+    },
+    "checks": [
+      {
+        "date": "2026-08-05",
+        "typical": 789,
+        "low": 699,
+        "notes": "Modèle très distribué, fréquemment en promo. Soldes été 2026 probables chez Boulanger/Fnac. Prix bas observés en déstockage CDiscount ou marketplace.",
+        "trend": "baisse",
+        "confidence": 38
+      }
+    ]
+  },
+  "Bosch KGN49XLEA Serie 6": {
+    "daily": {
+      "2026-08-05": {
+        "min": 669,
+        "typical": 749
+      }
+    },
+    "checks": [
+      {
+        "date": "2026-08-05",
+        "typical": 749,
+        "low": 669,
+        "notes": "Référence très concurrentielle, régulièrement soldée. Prix plancher fréquent en promo croisée Darty/Boulanger. Tendance légère à la baisse post-soldes été.",
+        "trend": "baisse",
+        "confidence": 36
+      }
+    ]
+  },
+  "Liebherr CNd 5204 Pure": {
+    "daily": {
+      "2026-08-05": {
+        "min": 769,
+        "typical": 839
+      }
+    },
+    "checks": [
+      {
+        "date": "2026-08-05",
+        "typical": 839,
+        "low": 769,
+        "notes": "Prix généralement stable chez revendeurs agréés Liebherr. Petites remises possibles en marketplace. Moins promu que les marques grand volume.",
+        "trend": "stable",
+        "confidence": 33
+      }
+    ]
+  },
+  "Siemens KG49NXIEP iQ300": {
+    "daily": {
+      "2026-08-05": {
+        "min": 689,
+        "typical": 769
+      }
+    },
+    "checks": [
+      {
+        "date": "2026-08-05",
+        "typical": 769,
+        "low": 689,
+        "notes": "Concurrent direct du Bosch Serie 6 (même groupe BSH). Prix alignés entre enseignes. Promos fréquentes en période estivale. CDiscount parfois le moins cher.",
+        "trend": "stable",
+        "confidence": 35
+      }
+    ]
+  },
+  "AEG RCB736E5MX": {
+    "daily": {
+      "2026-08-05": {
+        "min": 779,
+        "typical": 849
+      }
+    },
+    "checks": [
+      {
+        "date": "2026-08-05",
+        "typical": 849,
+        "low": 779,
+        "notes": "Modèle milieu-haut de gamme AEG (groupe Electrolux). Distribution plus sélective, promos moins fréquentes. Prix plancher possible sur Amazon.fr ou Fnac marketplace.",
+        "trend": "stable",
+        "confidence": 30
+      }
+    ]
+  }
+}
