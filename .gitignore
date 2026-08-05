@@ -1,0 +1,35 @@
+# Secrets — jamais dans le repo
+**/config.local.json
+**/.env
+**/secrets.json
+
+# Données générées localement (trop volumineuses / privées)
+procurement/reports/
+maison/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/settings.json
+.idea/
+*.suo
+*.user

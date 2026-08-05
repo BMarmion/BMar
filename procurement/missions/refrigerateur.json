@@ -1,0 +1,49 @@
+{
+  "name": "Réfrigérateur",
+  "slug": "refrigerateur",
+  "icon": "🧊",
+  "product_type": "réfrigérateur combiné ou américain neuf",
+  "domain": "électroménager froid domestique",
+  "brand_universe": [
+    "Bosch", "Siemens", "LG", "Samsung", "Liebherr", "Miele",
+    "AEG", "Electrolux", "Whirlpool", "Haier", "Hisense",
+    "Sharp", "Beko", "Hotpoint-Ariston", "Candy"
+  ],
+  "expert_sources": [
+    "https://www.lesnumeriques.com/refrigerateur/comparatif-meilleur-refrigerateur-ra44.html",
+    "https://www.quechoisir.org/comparatif-refrigerateur-n4/"
+  ],
+  "retailers": [
+    {"name": "Darty",     "search_url": "https://www.darty.com/nav/recherche?text={query}"},
+    {"name": "Fnac",      "search_url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search={query}"},
+    {"name": "Boulanger", "search_url": "https://www.boulanger.com/recherche?q={query}"},
+    {"name": "Amazon.fr", "search_url": "https://www.amazon.fr/s?k={query}"}
+  ],
+  "context": {
+    "kwh_price_eur": 0.22,
+    "tco_years": 15
+  },
+  "constraints": {
+    "mandatory": {
+      "condition": "new",
+      "availability": { "country": "FR" },
+      "dimensions": { "width": { "max": 900 } }
+    }
+  },
+  "evaluation": {
+    "score": 100,
+    "dimensions": {
+      "reliability":        { "weight": 35, "label": "Fiabilité / SAV",       "description": "pannes historiques, compresseur, réseau SAV France" },
+      "main_performance":   { "weight": 20, "label": "Volume utile",           "description": "0 si <350L, maximum à 400L+" },
+      "total_cost":         { "weight": 20, "label": "Rapport qualité/prix",   "description": "prix marché FR, TCO, fausses promos" },
+      "resource_efficiency":{ "weight": 10, "label": "Efficacité énergétique", "description": "Classe A=max, G=0" },
+      "sensory":            { "weight": 10, "label": "Silence",                "description": "≤35 dB = max, >38 dB = 0" },
+      "features":           { "weight":  5, "label": "Fonctionnalités",        "description": "no frost total, fast cooling, tiroir humidité, LED" }
+    }
+  },
+  "criteria": {
+    "main_performance": { "minimum": 350, "ideal": 400, "unit": "L" },
+    "sensory":          { "target": 35, "maximum": 38, "unit": "dB" },
+    "features":         { "preferred": ["total_no_frost","fast_cooling","fast_freezing","led_lighting","humidity_drawer"] }
+  }
+}

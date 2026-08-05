@@ -1,0 +1,45 @@
+name: 🛒 Purchase Intelligence — Rapport hebdo
+
+on:
+  schedule:
+    # Tous les dimanches à 9h00 heure de Paris (UTC+1/+2)
+    # En été (CEST = UTC+2) → 7h UTC = 9h Paris
+    - cron: "0 7 * * 0"
+
+  # Permet de lancer manuellement depuis GitHub → Actions → Run workflow
+  workflow_dispatch:
+
+jobs:
+  weekly-price-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer les dépendances
+        run: pip install --quiet requests
+
+      - name: Vérifier les prix (toutes missions)
+        env:
+          ANTHROPIC_API_KEY:    ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN:   ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:     ${{ secrets.TELEGRAM_CHAT_ID }}
+          PYTHONIOENCODING:     utf-8
+        run: |
+          cd procurement
+          python tracker.py --all
+
+      - name: Sauvegarder l'historique des prix
+        run: |
+          git config user.name  "Purchase Intelligence Bot"
+          git config user.email "bot@purchase-intelligence"
+          git add procurement/data/*/price_history.json || true
+          git diff --cached --quiet || git commit -m "📈 Prix hebdo $(date +%Y-%m-%d)"
+          git push || echo "Rien à pusher"

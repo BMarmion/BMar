@@ -1,0 +1,51 @@
+{
+  "name": "Canapé",
+  "slug": "canape",
+  "icon": "🛋️",
+  "product_type": "canapé 3 places ou canapé d'angle neuf",
+  "domain": "mobilier et ameublement intérieur",
+  "brand_universe": [
+    "IKEA", "Maisons du Monde", "Roche Bobois", "Habitat",
+    "La Redoute Intérieurs", "Fly", "But", "Conforama",
+    "Boutica Design", "Inside75", "Miliboo", "Kibuc",
+    "Camif", "Made.com", "Westwing"
+  ],
+  "expert_sources": [
+    "https://www.quechoisir.org/comparatif-canape-n53/",
+    "https://www.meilleurtest.fr/canape/"
+  ],
+  "retailers": [
+    {"name": "Maisons du Monde", "search_url": "https://www.maisonsdumonde.com/FR/fr/search?q={query}"},
+    {"name": "La Redoute",       "search_url": "https://www.laredoute.fr/catalogsearch/result/?q={query}"},
+    {"name": "But",              "search_url": "https://www.but.fr/recherche/{query}/"},
+    {"name": "Conforama",        "search_url": "https://www.conforama.fr/search?query={query}"},
+    {"name": "Amazon.fr",        "search_url": "https://www.amazon.fr/s?k={query}"}
+  ],
+  "context": {
+    "kwh_price_eur": 0.0,
+    "tco_years": 10
+  },
+  "constraints": {
+    "mandatory": {
+      "condition": "new",
+      "availability": { "country": "FR" },
+      "seats": { "min": 3 }
+    }
+  },
+  "evaluation": {
+    "score": 100,
+    "dimensions": {
+      "reliability":         { "weight": 30, "label": "Durabilité / qualité",  "description": "résistance tissu ou cuir, solidité structure, retours terrain 3 ans+" },
+      "main_performance":    { "weight": 25, "label": "Confort assis/allongé", "description": "fermeté assise, maintien dos, déformabilité coussins" },
+      "total_cost":          { "weight": 25, "label": "Rapport qualité/prix",  "description": "prix neuf FR, promotions saisonnières, coût au siège" },
+      "resource_efficiency": { "weight":  5, "label": "Éco-responsabilité",    "description": "origine matériaux, labels, recyclabilité" },
+      "sensory":             { "weight": 10, "label": "Esthétique / toucher",  "description": "rendu visuel, finitions, options coloris" },
+      "features":            { "weight":  5, "label": "Fonctionnalités",       "description": "méridienne, convertible, coffre, pieds réglables" }
+    }
+  },
+  "criteria": {
+    "main_performance": { "minimum": 3, "ideal": 5, "unit": "places" },
+    "sensory":          { "preferred_materials": ["tissu", "cuir", "velours"] },
+    "features":         { "preferred": ["meridienne", "convertible", "coffre", "pieds_reglables"] }
+  }
+}

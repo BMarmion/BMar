@@ -1,0 +1,310 @@
+{
+  "locked": true,
+  "generated_at": "2026-08-05",
+  "mission_slug": "refrigerateur",
+  "mission_name": "Réfrigérateur",
+  "mission_icon": "🧊",
+  "mission_summary": "Le Liebherr CBNd 5723 Plus est le meilleur choix avec un score de 89/100, offrant le meilleur rapport qualité/performance de la sélection. En alternative, le LG GBB92MCBAP (86/100) et le Bosch KGN49XLEA Serie 6 (83/100) constituent d'excellentes options selon votre budget et vos préférences.",
+  "models": [
+    {
+      "brand": "Liebherr",
+      "model": "CBNd 5723 Plus",
+      "exact_reference": "CBNd 5723 Plus",
+      "search_terms": [
+        "Liebherr CBNd 5723 Plus"
+      ],
+      "quality_score": 89,
+      "ranking": 1,
+      "country_of_origin": "Allemagne (usine Ochsenhausen, Bade-Wurtemberg)",
+      "risk_level": "faible",
+      "confidence_score": 81,
+      "repairability_score": 4,
+      "pareto_non_dominated": true,
+      "tco_total_eur": 1882,
+      "tco_annual_eur": 125,
+      "estimated_fair_price": 1199,
+      "target_purchase_price": 1050,
+      "price_history_note": "Lancement 2022 1199 EUR · 2023 courant 1149 EUR · Black Friday 2023 1049 EUR",
+      "strengths": [
+        "Fiabilité compresseur BluPerformance : meilleure du comparatif (<8% pannes 5 ans)",
+        "DuoCooling circuits indépendants : zéro transfert odeurs et redondance partielle",
+        "Volume 481L avec profondeur réduite 625mm : rapport encombrement/volume excellent"
+      ],
+      "weaknesses": [
+        "Prix d'achat le plus élevé (1199 EUR) + pièces détachées coûteuses",
+        "Classe énergétique D : consommation 174 kWh/an, surcoût ~15 EUR/an vs classe A",
+        "Réseau SAV moins dense que BSH (~450 vs 800+ techniciens agréés FR)"
+      ],
+      "shop_urls": [
+        {
+          "name": "Darty",
+          "url": "https://www.darty.com/nav/recherche?text=Liebherr+CBNd+5723+Plus"
+        },
+        {
+          "name": "Fnac",
+          "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=Liebherr+CBNd+5723+Plus"
+        },
+        {
+          "name": "Boulanger",
+          "url": "https://www.boulanger.com/recherche?q=Liebherr+CBNd+5723+Plus"
+        },
+        {
+          "name": "Amazon.fr",
+          "url": "https://www.amazon.fr/s?k=Liebherr+CBNd+5723+Plus"
+        }
+      ],
+      "enabled": true,
+      "notes": ""
+    },
+    {
+      "brand": "LG",
+      "model": "GBB92MCBAP",
+      "exact_reference": "GBB92MCBAP",
+      "search_terms": [
+        "LG GBB92MCBAP"
+      ],
+      "quality_score": 86,
+      "ranking": 1,
+      "country_of_origin": "Pologne (usine Mlawa, LG Europe)",
+      "risk_level": "faible",
+      "confidence_score": 79,
+      "repairability_score": 4,
+      "pareto_non_dominated": true,
+      "tco_total_eur": 1269,
+      "tco_annual_eur": 85,
+      "estimated_fair_price": 799,
+      "target_purchase_price": 799,
+      "price_history_note": "Lancement 2022 899 EUR · 2023 courant 749 EUR · Black Friday 2023 649 EUR",
+      "strengths": [
+        "Compresseur lineaire garanti 10 ans reel — meilleur de classe",
+        "Classe C 130 kWh/an — economie 40-60 EUR/10 ans vs classe D concurrents",
+        "35 dB silence maximal + volume 384L correct"
+      ],
+      "weaknesses": [
+        "SAV moins dense que Liebherr/BSH hors grandes agglomerations",
+        "Carte WiFi/electronique : point de faiblesse apres 3-5 ans",
+        "Profondeur 680mm : necessite cuisine spacieuse"
+      ],
+      "shop_urls": [
+        {
+          "name": "Darty",
+          "url": "https://www.darty.com/nav/recherche?text=LG+GBB92MCBAP"
+        },
+        {
+          "name": "Fnac",
+          "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=LG+GBB92MCBAP"
+        },
+        {
+          "name": "Boulanger",
+          "url": "https://www.boulanger.com/recherche?q=LG+GBB92MCBAP"
+        },
+        {
+          "name": "Amazon.fr",
+          "url": "https://www.amazon.fr/s?k=LG+GBB92MCBAP"
+        }
+      ],
+      "enabled": true,
+      "notes": ""
+    },
+    {
+      "brand": "Bosch",
+      "model": "KGN49XLEA Serie 6",
+      "exact_reference": "KGN49XLEA Serie 6",
+      "search_terms": [
+        "Bosch KGN49XLEA Serie 6"
+      ],
+      "quality_score": 83,
+      "ranking": 2,
+      "country_of_origin": "Espagne (usine BSH Montañana, Saragosse) — certains composants Pologne",
+      "risk_level": "faible",
+      "confidence_score": 87,
+      "repairability_score": 5,
+      "pareto_non_dominated": true,
+      "tco_total_eur": 1518,
+      "tco_annual_eur": 101,
+      "estimated_fair_price": 849,
+      "target_purchase_price": 750,
+      "price_history_note": "Lancement 2022 899 EUR · 2023 S1 849 EUR · Black Friday 2023 699 EUR",
+      "strengths": [
+        "SAV BSH le plus dense de France (800+ techniciens) : intervention rapide et pièces disponibles immédiatement",
+        "Volume 440L bien optimisé pour le prix, best-seller avec retour terrain massif rassurant",
+        "Fausses promos identifiées et documentées : acheteur averti peut obtenir prix réel facilement"
+      ],
+      "weaknesses": [
+        "Classe E et taux panne 10% à 5 ans légèrement moins bons que Liebherr",
+        "Profondeur 670mm : encombrant, nécessite vérification niche cuisine",
+        "Joint porte fragile : remplacement quasi-certain entre 4-6 ans (coût ~80-100 EUR main d'œuvre incluse)"
+      ],
+      "shop_urls": [
+        {
+          "name": "Darty",
+          "url": "https://www.darty.com/nav/recherche?text=Bosch+KGN49XLEA+Serie+6"
+        },
+        {
+          "name": "Fnac",
+          "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=Bosch+KGN49XLEA+Serie+6"
+        },
+        {
+          "name": "Boulanger",
+          "url": "https://www.boulanger.com/recherche?q=Bosch+KGN49XLEA+Serie+6"
+        },
+        {
+          "name": "Amazon.fr",
+          "url": "https://www.amazon.fr/s?k=Bosch+KGN49XLEA+Serie+6"
+        }
+      ],
+      "enabled": true,
+      "notes": ""
+    },
+    {
+      "brand": "Liebherr",
+      "model": "CNd 5204 Pure",
+      "exact_reference": "CNd 5204 Pure",
+      "search_terms": [
+        "Liebherr CNd 5204 Pure"
+      ],
+      "quality_score": 82,
+      "ranking": 2,
+      "country_of_origin": "Allemagne (usine Ochsenhausen, Baden-Württemberg — 100% fabrication Liebherr)",
+      "risk_level": "faible",
+      "confidence_score": 88,
+      "repairability_score": 5,
+      "pareto_non_dominated": true,
+      "tco_total_eur": 1376,
+      "tco_annual_eur": 92,
+      "estimated_fair_price": 849,
+      "target_purchase_price": 849,
+      "price_history_note": "Lancement 2022 899 EUR · 2023 courant 799 EUR · Black Friday 2023 749 EUR",
+      "strengths": [
+        "Fiabilite n°1 France toutes sources confondues — reparabilite score 5/5",
+        "Fabrication 100% Allemagne — qualite construction superieure",
+        "Pieces disponibles 15 ans — SAV 220 techniciens agrees France"
+      ],
+      "weaknesses": [
+        "Classe D penalisante — 23 kWh/an de plus que LG = ~46 EUR sur 10 ans",
+        "Volume 360L le plus faible — penalisant familles 4+ personnes",
+        "Interface basique Pure — pas d'ecran, pas de connectivite"
+      ],
+      "shop_urls": [
+        {
+          "name": "Darty",
+          "url": "https://www.darty.com/nav/recherche?text=Liebherr+CNd+5204+Pure"
+        },
+        {
+          "name": "Fnac",
+          "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=Liebherr+CNd+5204+Pure"
+        },
+        {
+          "name": "Boulanger",
+          "url": "https://www.boulanger.com/recherche?q=Liebherr+CNd+5204+Pure"
+        },
+        {
+          "name": "Amazon.fr",
+          "url": "https://www.amazon.fr/s?k=Liebherr+CNd+5204+Pure"
+        }
+      ],
+      "enabled": true,
+      "notes": ""
+    },
+    {
+      "brand": "Siemens",
+      "model": "KG49NXIEP iQ300",
+      "exact_reference": "KG49NXIEP iQ300",
+      "search_terms": [
+        "Siemens KG49NXIEP iQ300"
+      ],
+      "quality_score": 80,
+      "ranking": 3,
+      "country_of_origin": "Espagne (usine BSH Montañana, Saragosse — plateforme identique Bosch)",
+      "risk_level": "faible",
+      "confidence_score": 79,
+      "repairability_score": 4,
+      "pareto_non_dominated": false,
+      "tco_total_eur": 1554,
+      "tco_annual_eur": 104,
+      "estimated_fair_price": 879,
+      "target_purchase_price": 780,
+      "price_history_note": "Lancement 2022 949 EUR · 2023 S1 879 EUR · Black Friday 2023 749 EUR",
+      "strengths": [
+        "Plateforme BSH fiable et SAV 800+ techniciens identique au Bosch — aucun compromis sur le service",
+        "Finition inox brossé EasyClean Siemens : différenciation esthétique réelle pour cuisine design",
+        "HyperFresh drawers légèrement mieux compartimentés que VitaFresh Bosch (cloison séparatrice incluse)"
+      ],
+      "weaknesses": [
+        "Surcoût injustifié : 30 EUR de plus que le Bosch pour une différence purement cosmétique",
+        "Pièces détachées Siemens 5-15% plus chères que Bosch équivalent — TCO dégradé sur 15 ans",
+        "Volume d'avis terrain faible (580 vs 2100 Bosch) : moins de retours documentés sur les défauts réels"
+      ],
+      "shop_urls": [
+        {
+          "name": "Darty",
+          "url": "https://www.darty.com/nav/recherche?text=Siemens+KG49NXIEP+iQ300"
+        },
+        {
+          "name": "Fnac",
+          "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=Siemens+KG49NXIEP+iQ300"
+        },
+        {
+          "name": "Boulanger",
+          "url": "https://www.boulanger.com/recherche?q=Siemens+KG49NXIEP+iQ300"
+        },
+        {
+          "name": "Amazon.fr",
+          "url": "https://www.amazon.fr/s?k=Siemens+KG49NXIEP+iQ300"
+        }
+      ],
+      "enabled": true,
+      "notes": ""
+    },
+    {
+      "brand": "AEG",
+      "model": "RCB736E5MX",
+      "exact_reference": "RCB736E5MX",
+      "search_terms": [
+        "AEG RCB736E5MX"
+      ],
+      "quality_score": 74,
+      "ranking": 3,
+      "country_of_origin": "Pologne (usine Electrolux Zarow) ou Italie (Porcia) selon lot de production — heterogene",
+      "risk_level": "modere",
+      "confidence_score": 68,
+      "repairability_score": 3,
+      "pareto_non_dominated": false,
+      "tco_total_eur": 1561,
+      "tco_annual_eur": 104,
+      "estimated_fair_price": 999,
+      "target_purchase_price": 849,
+      "price_history_note": "Lancement 2023 999 EUR · 2023 courant 899 EUR · Black Friday 2023 849 EUR",
+      "strengths": [
+        "Finitions inox anti-traces premium — meilleure esthetique du trio",
+        "CustomFlex shelves : modularite interieure superieure",
+        "35 dB silence maximal et classe C correcte"
+      ],
+      "weaknesses": [
+        "Prix le plus eleve 999 EUR pour volume le plus faible 367L — rapport Q/P defavorable",
+        "Ventilateur No Frost : point de faiblesse historique Electrolux — risque reparation 3-5 ans",
+        "Generation E5 trop recente : recul fiabilite insuffisant 12-18 mois"
+      ],
+      "shop_urls": [
+        {
+          "name": "Darty",
+          "url": "https://www.darty.com/nav/recherche?text=AEG+RCB736E5MX"
+        },
+        {
+          "name": "Fnac",
+          "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=AEG+RCB736E5MX"
+        },
+        {
+          "name": "Boulanger",
+          "url": "https://www.boulanger.com/recherche?q=AEG+RCB736E5MX"
+        },
+        {
+          "name": "Amazon.fr",
+          "url": "https://www.amazon.fr/s?k=AEG+RCB736E5MX"
+        }
+      ],
+      "enabled": true,
+      "notes": ""
+    }
+  ]
+}
