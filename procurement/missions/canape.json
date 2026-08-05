@@ -2,29 +2,112 @@
   "name": "Canapé",
   "slug": "canape",
   "icon": "🛋️",
-  "product_type": "canapé 3 places ou canapé d'angle neuf",
-  "domain": "mobilier et ameublement intérieur",
+  "product_type": "canapé 3 places ou d'angle neuf, usage famille quotidien",
+  "domain": "mobilier ameublement intérieur, fabricants européens spécialisés",
+  "n_finalists": 12,
+
   "brand_universe": [
-    "IKEA", "Maisons du Monde", "Roche Bobois", "Habitat",
-    "La Redoute Intérieurs", "Fly", "But", "Conforama",
-    "Boutica Design", "Inside75", "Miliboo", "Kibuc",
-    "Camif", "Made.com", "Westwing"
+    "SITS", "ROM", "Home Spirit", "Calia Italia", "Ditre Italia",
+    "Himolla", "Koinor", "Stressless", "Alberta Salotti",
+    "Fama", "LeComfort", "Nicoline", "Samoa",
+    "Mobilier de France", "Story", "Monsieur Meuble",
+    "Roche Bobois", "Cuir Center", "Gautier",
+    "IKEA", "Habitat", "Maisons du Monde",
+    "Bobochic", "NV Gallery", "Tikamoon"
   ],
+
+  "manufacturer_tiers": {
+    "5_stars": {
+      "brands": ["SITS", "ROM", "Home Spirit", "Calia Italia", "Ditre Italia", "Himolla", "Koinor", "Stressless", "Alberta Salotti"],
+      "note": "Fabricants européens spécialisés, référence qualité, durée de vie 15-25 ans"
+    },
+    "4_stars": {
+      "brands": ["Fama", "LeComfort", "Nicoline", "Samoa"],
+      "note": "Très bons fabricants, quelques compromis sur certaines gammes"
+    },
+    "3_stars": {
+      "brands": ["Mobilier de France", "Gautier", "IKEA", "Habitat"],
+      "note": "Corrects. Mobilier de France dépend du fabricant OEM du modèle. IKEA : excellent Q/P mais pas au niveau des spécialisés"
+    },
+    "2_stars": {
+      "brands": ["Bobochic", "NV Gallery", "Maisons du Monde"],
+      "note": "Qualité variable selon modèles et sous-traitants. Forte présence marketing, peu de données techniques"
+    },
+    "distributors": {
+      "brands": ["Mobilier de France", "Story", "Monsieur Meuble", "Roche Bobois", "Cuir Center", "Gautier"],
+      "note": "Marques de distribution : identifier systématiquement le fabricant OEM réel. La marque distributrice n'est jamais un critère qualité à elle seule."
+    }
+  },
+
+  "oem_detection": {
+    "enabled": true,
+    "instruction": "OBLIGATOIRE : identifier si deux modèles de distributeurs différents sortent du même fabricant ou de la même usine. Signaler explicitement les doublons OEM avec le delta de prix. Ex : 'Story Modele A = Mobilier de France Modele B (même usine polonaise SITS) — écart 400 EUR'. C'est une source d'économies majeure pour le client.",
+    "fields_required": ["actual_manufacturer", "manufacturer_country", "distributor_brand", "oem_siblings"]
+  },
+
+  "red_flags": [
+    "marque uniquement présente sur les réseaux sociaux",
+    "aucune information sur la structure ou les mousses",
+    "fabricant non identifiable",
+    "très design mais peu documenté",
+    "origine inconnue",
+    "garantie < 2 ans",
+    "ne jamais noter uniquement sur l'esthétique"
+  ],
+
+  "construction_spec": {
+    "structure": {
+      "preferred": ["hêtre massif", "multiplis bouleau", "panneaux haute densité"],
+      "avoid": ["aggloméré structurel", "bois tendre non renforcé", "OSB"]
+    },
+    "suspensions": {
+      "ranking": [
+        {"rank": 1, "type": "ressorts Nosag (sinueux)", "note": "meilleure durabilité"},
+        {"rank": 2, "type": "ressorts ensachés (pocket springs)", "note": "confort individuel"},
+        {"rank": 3, "type": "sangles haut de gamme (élastron)", "note": "acceptable si qualité >90%"}
+      ],
+      "avoid": ["sangles bas de gamme", "sangles polyester simple"]
+    },
+    "foams": {
+      "seat": {
+        "preferred": "HR (haute résilience)",
+        "density_kg_m3": {"min": 35, "ideal": 40, "max": 45},
+        "note": "Densité < 30 = mousse bas de gamme, affaissement garanti avant 5 ans"
+      },
+      "back": {
+        "preferred": ["HR haute résilience", "plume + mousse (garnissage mixte)", "mousse + fibre"],
+        "avoid": ["mousse faible densité", "polyester seul"]
+      }
+    },
+    "fabric": {
+      "preferred": ["tissu premium", "cuir pleine fleur", "velours haute qualité"],
+      "martindale_minimum": 80000,
+      "criteria": ["résistance à l'abrasion Martindale > 80 000", "nettoyage facile", "excellente tenue des couleurs", "disponibilité en réassort"]
+    }
+  },
+
+  "longevity_objective": "Sélectionner le canapé ayant la meilleure probabilité d'être encore confortable ET esthétiquement satisfaisant dans 15 ans. Pas le plus connu. Pas le plus design. Le plus durable.",
+
   "expert_sources": [
     "https://www.quechoisir.org/comparatif-canape-n53/",
     "https://www.meilleurtest.fr/canape/"
   ],
+
   "retailers": [
-    {"name": "Maisons du Monde", "search_url": "https://www.maisonsdumonde.com/FR/fr/search?q={query}"},
     {"name": "La Redoute",       "search_url": "https://www.laredoute.fr/catalogsearch/result/?q={query}"},
+    {"name": "Maisons du Monde", "search_url": "https://www.maisonsdumonde.com/FR/fr/search?q={query}"},
     {"name": "But",              "search_url": "https://www.but.fr/recherche/{query}/"},
     {"name": "Conforama",        "search_url": "https://www.conforama.fr/search?query={query}"},
-    {"name": "Amazon.fr",        "search_url": "https://www.amazon.fr/s?k={query}"}
+    {"name": "Amazon.fr",        "search_url": "https://www.amazon.fr/s?k={query}"},
+    {"name": "Roche Bobois",     "search_url": "https://www.roche-bobois.com/fr-FR/search?q={query}"}
   ],
+
   "context": {
     "kwh_price_eur": 0.0,
-    "tco_years": 10
+    "tco_years": 15,
+    "tco_note": "TCO canapé = prix achat + coût entretien estimé + valeur résiduelle négative si remplacement avant 15 ans"
   },
+
   "constraints": {
     "mandatory": {
       "condition": "new",
@@ -32,20 +115,46 @@
       "seats": { "min": 3 }
     }
   },
+
   "evaluation": {
     "score": 100,
     "dimensions": {
-      "reliability":         { "weight": 30, "label": "Durabilité / qualité",  "description": "résistance tissu ou cuir, solidité structure, retours terrain 3 ans+" },
-      "main_performance":    { "weight": 25, "label": "Confort assis/allongé", "description": "fermeté assise, maintien dos, déformabilité coussins" },
-      "total_cost":          { "weight": 25, "label": "Rapport qualité/prix",  "description": "prix neuf FR, promotions saisonnières, coût au siège" },
-      "resource_efficiency": { "weight":  5, "label": "Éco-responsabilité",    "description": "origine matériaux, labels, recyclabilité" },
-      "sensory":             { "weight": 10, "label": "Esthétique / toucher",  "description": "rendu visuel, finitions, options coloris" },
-      "features":            { "weight":  5, "label": "Fonctionnalités",       "description": "méridienne, convertible, coffre, pieds réglables" }
+      "reliability": {
+        "weight": 35,
+        "label": "Durabilité / Fabricant",
+        "description": "Qualité structure (hêtre/multiplis), suspensions (Nosag > ensachés > sangles), mousse (HR 35-45 kg/m³), réputation SAV, pièces disponibles, housses réassortissables, durée de vie observée. Fabricant identifié = bonus. Marque inconnue = malus fort."
+      },
+      "main_performance": {
+        "weight": 25,
+        "label": "Confort 15 ans",
+        "description": "Confort assis (fermeté, maintien dos), confort allongé, résistance à l'affaissement des mousses, maintien de forme dans le temps. Note basée sur durabilité du confort, pas uniquement le ressenti initial."
+      },
+      "total_cost": {
+        "weight": 20,
+        "label": "Rapport qualité/prix réel",
+        "description": "Prix marché FR, historique promos, détection fausses promos. Si OEM identifié : signaler le modèle équivalent moins cher. Coût annualisé sur 15 ans. Garantie incluse."
+      },
+      "resource_efficiency": {
+        "weight": 5,
+        "label": "Éco-responsabilité",
+        "description": "Origine matériaux (bois certifié PEFC/FSC), labels, réparabilité, disponibilité pièces longue durée, fabrication européenne"
+      },
+      "sensory": {
+        "weight": 10,
+        "label": "Esthétique / Toucher",
+        "description": "Rendu visuel intemporel (pas uniquement tendance), qualité du toucher du revêtement, finitions, nombre de coloris disponibles, tenue dans le temps de l'aspect"
+      },
+      "features": {
+        "weight": 5,
+        "label": "Fonctionnalités",
+        "description": "méridienne, convertible (qualité du couchage), coffre de rangement, pieds réglables, têtières réglables, modularité"
+      }
     }
   },
+
   "criteria": {
     "main_performance": { "minimum": 3, "ideal": 5, "unit": "places" },
-    "sensory":          { "preferred_materials": ["tissu", "cuir", "velours"] },
-    "features":         { "preferred": ["meridienne", "convertible", "coffre", "pieds_reglables"] }
+    "sensory":          { "preferred_materials": ["tissu premium", "cuir pleine fleur", "velours"] },
+    "features":         { "preferred": ["meridienne", "convertible_qualite", "coffre", "tetes_appui_reglables", "modulable"] }
   }
 }

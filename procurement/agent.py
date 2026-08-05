@@ -158,19 +158,14 @@ def parse_json(text):
 # PHASE 1 — Scan univers marques + pre-filtrage
 # ════════════════════════════════════════════════════════════════════════════════
 
-def discover_universe(api_key, mission, sources):
-    product_type  = mission.get("product_type", "produit")
-    brand_universe = mission.get("brand_universe", [])
-    dims = mission.get("constraints", {}).get("mandatory", {}).get("dimensions", {})
-    perf = mission.get("criteria", {}).get("main_performance", {})
-    sens = mission.get("criteria", {}).get("sensory", {})
+def _discover_prompt_generic(mission, brand_universe, dims, perf, sens, sources_text):
+    """Prompt générique pour la découverte d'univers produit."""
+    product_type = mission.get("product_type", "produit")
     dim_strs = [f"{k} ≤ {v.get('max')}" for k, v in dims.items() if v.get("max")]
     perf_str = f"Performance principale ≥ {perf.get('minimum',0)} {perf.get('unit','')}" if perf else ""
     sens_str = f"Contrainte sensorielle ≤ {sens.get('maximum',0)} {sens.get('unit','')}" if sens else ""
-
-    sources_text = "\n\n".join(f"=== {k.upper()} ===\n{v}" for k, v in sources.items()) if sources else "(pas de sources)"
-
-    prompt = f"""MISSION : identifier les meilleurs {product_type} disponibles en France.
+    n_fin    = mission.get("n_finalists", 6)
+    return f"""MISSION : identifier les meilleurs {product_type} disponibles en France.
 
 UNIVERS DE MARQUES A EVALUER — TOUTES sans exception :
 {', '.join(brand_universe)}
@@ -180,9 +175,9 @@ FILTRES ELIMINATOIRES :
 - Produit NEUF disponible en France
 
 METHODE :
-1. Pour chaque marque, identifie 1-3 references pertinentes dans les contraintes
-2. Elimine les non-conformes — explique pourquoi pour les marques sans candidat
-3. Classe les 12 meilleurs candidats survivants par interet potentiel
+1. Pour chaque marque, identifie 1-3 references pertinentes
+2. Elimine les non-conformes — explique pourquoi
+3. Classe les {n_fin*2} meilleurs candidats survivants par interet potentiel
 4. Indique pour chaque marque si elle a des candidats ou non
 
 DONNEES EXPERTES :
@@ -198,7 +193,101 @@ JSON attendu :
     "reliability_notes":"Compresseur eprouve, SAV FR dense","source":"Les Numeriques + marche FR"}}
 ]}}"""
 
-    text = claude(api_key, prompt, system=make_expert_system(mission), max_tokens=3500)
+def _discover_prompt_furniture(mission, brand_universe, sources_text):
+    """Prompt spécialisé pour les canapés/meubles — détection OEM + fabricant vs distributeur."""
+    product_type   = mission.get("product_type", "produit")
+    n_fin          = mission.get("n_finalists", 12)
+    tiers          = mission.get("manufacturer_tiers", {})
+    oem            = mission.get("oem_detection", {})
+    construction   = mission.get("construction_spec", {})
+    red_flags      = mission.get("red_flags", [])
+    longevity_obj  = mission.get("longevity_objective", "")
+
+    tiers_text = ""
+    for tier, info in tiers.items():
+        if tier == "distributors": continue
+        brands_str = ", ".join(info.get("brands", []))
+        tiers_text += f"  {tier.replace('_',' ').upper()} : {brands_str} — {info.get('note','')}\n"
+
+    distributors = tiers.get("distributors", {}).get("brands", [])
+
+    foam_seat = construction.get("foams",{}).get("seat",{})
+    susps = construction.get("suspensions",{}).get("ranking",[])
+    susps_text = " > ".join(s.get("type","") for s in susps)
+    struct_ok  = ", ".join(construction.get("structure",{}).get("preferred",[]))
+    struct_ko  = ", ".join(construction.get("structure",{}).get("avoid",[]))
+    fabric_min = construction.get("fabric",{}).get("martindale_minimum",80000)
+
+    oem_instruction = oem.get("instruction","")
+    red_flags_text  = "\n".join(f"  - {rf}" for rf in red_flags)
+
+    return f"""MISSION : identifier les meilleurs {product_type} disponibles en France.
+
+OBJECTIF : {longevity_obj}
+
+MARQUES A EVALUER — TOUTES :
+{', '.join(brand_universe)}
+
+HIERARCHIE QUALITE FABRICANTS :
+{tiers_text}
+MARQUES DISTRIBUTEURS (identifier leur fabricant OEM) :
+{', '.join(distributors)}
+
+DETECTION OEM OBLIGATOIRE :
+{oem_instruction}
+
+SIGNAUX D'ALARME — jamais noter haut si :
+{red_flags_text}
+
+SPECIFICATIONS TECHNIQUES REQUISES :
+Structure : preferee = {struct_ok} | a eviter = {struct_ko}
+Suspensions (ordre preference) : {susps_text}
+Mousse assise : HR {foam_seat.get('density_kg_m3',{}).get('min',35)}-{foam_seat.get('density_kg_m3',{}).get('max',45)} kg/m3
+Tissu : Martindale > {fabric_min}
+
+DONNEES EXPERTES :
+{sources_text}
+
+METHODE :
+1. Pour chaque marque/distributeur, identifie 1-2 modeles 3 places ou angle representatifs
+2. Pour les distributeurs : identifie le fabricant OEM reel (usine, pays, gamme)
+3. Detecte les doublons OEM entre distributeurs differents
+4. Elimine les marques sans donnees techniques fiables (red flags)
+5. Selectionne les {n_fin*2} meilleurs candidats
+
+JSON :
+{{"brand_coverage":{{"SITS":"Modele Neva 3P (fabricant direct, Suede/Pologne)","Story":"Modele Oslo (fabricant OEM inconnu — insuffisant)"}},
+"candidates":[
+  {{"brand":"SITS","model":"Neva","actual_manufacturer":"SITS","manufacturer_country":"Pologne",
+    "distributor_brand":null,"is_distributor_brand":false,
+    "oem_siblings":[],
+    "type":"3_places","seats":3,"price_fr_eur":2200,"warranty_years":5,
+    "structure":"hetre massif + multiplis bouleau","suspensions":"ressorts Nosag",
+    "foam_seat_density_kg_m3":40,"foam_type":"HR haute resilience",
+    "martindale":100000,"fabric_type":"tissu premium",
+    "features":["modulable","tetes_appui_reglables"],
+    "reliability_notes":"Fabricant scandinave reference, SAV FR via revendeurs agrees",
+    "source":"quechoisir + avis revendeurs"}}
+]}}"""
+
+def discover_universe(api_key, mission, sources):
+    product_type   = mission.get("product_type", "produit")
+    brand_universe = mission.get("brand_universe", [])
+    dims = mission.get("constraints", {}).get("mandatory", {}).get("dimensions", {})
+    perf = mission.get("criteria", {}).get("main_performance", {})
+    sens = mission.get("criteria", {}).get("sensory", {})
+    sources_text = "\n\n".join(f"=== {k.upper()} ===\n{v}" for k, v in sources.items()) if sources else "(pas de sources)"
+
+    # Choix du prompt selon le domaine
+    is_furniture = bool(mission.get("manufacturer_tiers") or mission.get("oem_detection"))
+    if is_furniture:
+        prompt = _discover_prompt_furniture(mission, brand_universe, sources_text)
+        max_tok = 4500
+    else:
+        prompt = _discover_prompt_generic(mission, brand_universe, dims, perf, sens, sources_text)
+        max_tok = 3500
+
+    text = claude(api_key, prompt, system=make_expert_system(mission), max_tokens=max_tok)
     data = parse_json(text)
 
     # Filtrage hard en Python
@@ -277,9 +366,10 @@ JSON :
         if c["finalist"]:
             finalists_info.append(c)
 
+    n_fin_target = mission.get("n_finalists", 6)
     if len(finalists_info) < 4:
         all_ranked.sort(key=lambda x: -x.get("quick_scores", {}).get("subtotal", 0))
-        finalists_info = all_ranked[:6]
+        finalists_info = all_ranked[:n_fin_target]
         for c in finalists_info:
             c["finalist"] = True
 
@@ -298,6 +388,7 @@ def _score_batch(api_key, mission, batch):
     years        = mission.get("context", {}).get("tco_years", 15)
     perf         = mission.get("criteria", {}).get("main_performance", {})
     sens         = mission.get("criteria", {}).get("sensory", {})
+    is_furniture = bool(mission.get("manufacturer_tiers") or mission.get("oem_detection"))
 
     dims_text = "\n".join(
         f"- {v.get('label','?')} : {v.get('weight',0)} pts — {v.get('description','')}"
@@ -307,8 +398,42 @@ def _score_batch(api_key, mission, batch):
     perf_desc = f"0 si < {perf.get('minimum',0)}{perf.get('unit','')}, max a {perf.get('ideal', perf.get('minimum',0))}{perf.get('unit','')}" if perf else ""
     sens_desc = f"<= {sens.get('target',0)}{sens.get('unit','')} = max, > {sens.get('maximum',0)}{sens.get('unit','')} = 0" if sens else ""
 
-    prompt = f"""Analyse experte COMPLETE de ces {len(batch)} {product_type}.
+    # Bloc OEM/fabricant pour mobilier
+    oem_block = ""
+    if is_furniture:
+        oem = mission.get("oem_detection", {})
+        construction = mission.get("construction_spec", {})
+        longevity = mission.get("longevity_objective", "")
+        tiers = mission.get("manufacturer_tiers", {})
+        tiers_summary = " | ".join(
+            f"{k.replace('_',' ')}: {', '.join(v.get('brands',[])[:4])}"
+            for k, v in tiers.items() if k != "distributors" and v.get("brands")
+        )
+        foam_spec = construction.get("foams",{}).get("seat",{})
+        susps = " > ".join(s.get("type","") for s in construction.get("suspensions",{}).get("ranking",[]))
+        struct_ok = ", ".join(construction.get("structure",{}).get("preferred",[]))
+        oem_block = f"""
+OBJECTIF : {longevity}
 
+HIERARCHIE FABRICANTS : {tiers_summary}
+
+DETECTION OEM : {oem.get('instruction','')}
+
+SPECS CONSTRUCTION A VERIFIER ET NOTER :
+- Structure : {struct_ok}
+- Suspensions (ordre pref) : {susps}
+- Mousse assise : HR {foam_spec.get('density_kg_m3',{}).get('min',35)}-{foam_spec.get('density_kg_m3',{}).get('max',45)} kg/m3
+- Martindale tissu : > {construction.get('fabric',{}).get('martindale_minimum',80000)}
+
+CHAMPS SUPPLEMENTAIRES OBLIGATOIRES :
+actual_manufacturer, manufacturer_country, distributor_brand, is_distributor_brand,
+oem_siblings (liste des modeles equivalents chez d'autres distributeurs avec prix et delta),
+structure_type, suspension_type, foam_seat_density_kg_m3, martindale, warranty_years,
+parts_availability_years, covers_availability, manufacturer_age_years
+"""
+
+    prompt = f"""Analyse experte COMPLETE de ces {len(batch)} {product_type}.
+{oem_block}
 PONDERATIONS (total 100) :
 {dims_text}
   Performance : {perf_desc}

@@ -277,8 +277,13 @@ for mission, tab in zip(missions, mission_tabs):
                     st.markdown(bdg, unsafe_allow_html=True)
 
                     st.markdown(f"### {p['brand']} {p['model']}")
-                    origin  = p.get("country_of_origin","")
-                    cur_gen = p.get("current_generation", p.get("manufacturing_generation",""))
+                    origin       = p.get("country_of_origin") or p.get("manufacturer_country","")
+                    cur_gen      = p.get("current_generation", p.get("manufacturing_generation",""))
+                    actual_mfr   = p.get("actual_manufacturer","")
+                    distrib      = p.get("distributor_brand","")
+                    is_distrib   = p.get("is_distributor_brand", False)
+                    oem_siblings = p.get("oem_siblings", [])
+
                     specs   = " · ".join(filter(None, [
                         f"{p.get('volume_total_L','')}L"             if p.get("volume_total_L") else "",
                         (f"{p.get('width_mm','')}×{p.get('height_mm','')}×{p.get('depth_mm','')} mm"
@@ -287,10 +292,41 @@ for mission, tab in zip(missions, mission_tabs):
                         f"Classe {p.get('energy_class','')}"         if p.get("energy_class") else "",
                         f"{p.get('annual_kwh','')} kWh/an"           if p.get("annual_kwh") else "",
                         f"Fab. {origin}"                              if origin else "",
+                        p.get("structure_type","")                   if p.get("structure_type") else "",
+                        p.get("suspension_type","")                  if p.get("suspension_type") else "",
+                        f"Mousse {p.get('foam_seat_density_kg_m3','')} kg/m³" if p.get("foam_seat_density_kg_m3") else "",
+                        f"Martindale {p.get('martindale','')}+"      if p.get("martindale") else "",
                     ]))
                     st.caption(specs)
                     if cur_gen:
                         st.caption(f"🏭 {cur_gen}")
+
+                    # Bloc fabricant / OEM
+                    if actual_mfr or is_distrib:
+                        if is_distrib and actual_mfr:
+                            st.markdown(
+                                f'<div style="background:#fefcbf;border-radius:6px;padding:5px 10px;font-size:.78rem;margin-top:4px">'
+                                f'🏭 <strong>Fab. réel :</strong> {actual_mfr}'
+                                f'{" (" + origin + ")" if origin else ""}'
+                                f'{"  · Distribué par <strong>" + distrib + "</strong>" if distrib else ""}'
+                                f'</div>', unsafe_allow_html=True)
+                        elif actual_mfr:
+                            st.caption(f"🏭 Fabricant : {actual_mfr}{' (' + origin + ')' if origin else ''}")
+
+                    # Doublons OEM
+                    if oem_siblings:
+                        sib_lines = []
+                        for sib in oem_siblings:
+                            sib_name  = sib.get("brand","") + " " + sib.get("model","")
+                            sib_price = sib.get("price_fr_eur","?")
+                            sib_delta = sib.get("price_delta_eur")
+                            delta_str = f" → <strong style='color:#276749'>−{sib_delta} €</strong>" if sib_delta else ""
+                            sib_lines.append(f"≈ {sib_name} ({sib_price} €){delta_str}")
+                        st.markdown(
+                            f'<div style="background:#c6f6d5;border-radius:6px;padding:6px 10px;font-size:.78rem;margin-top:4px">'
+                            f'💡 <strong>OEM identique disponible moins cher :</strong><br>'
+                            + "<br>".join(sib_lines) +
+                            f'</div>', unsafe_allow_html=True)
 
                     bars_html = "".join(
                         score_bar_html(p["scores"].get(k,0), v.get("weight",0),
