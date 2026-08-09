@@ -4,6 +4,10 @@
       "2026-08-05": {
         "min": 949,
         "typical": 1049
+      },
+      "2026-08-09": {
+        "min": 949,
+        "typical": 1049
       }
     },
     "checks": [
@@ -14,6 +18,14 @@
         "notes": "Prix stable autour de 1050 EUR chez Darty/Boulanger. Destockage possible sur marketplace Amazon autour de 949 EUR. Modèle haut de gamme peu bradé.",
         "trend": "stable",
         "confidence": 35
+      },
+      {
+        "date": "2026-08-09",
+        "typical": 1049,
+        "low": 949,
+        "notes": "Prix stable autour de la cible. Destockage possible sur CDiscount ou marketplace Amazon. Soldes été 2026 peuvent avoir tiré le prix vers 949 EUR ponctuellement.",
+        "trend": "stable",
+        "confidence": 38
       }
     ]
   },
@@ -22,6 +34,10 @@
       "2026-08-05": {
         "min": 699,
         "typical": 789
+      },
+      "2026-08-09": {
+        "min": 699,
+        "typical": 779
       }
     },
     "checks": [
@@ -32,6 +48,14 @@
         "notes": "Modèle très distribué, fréquemment en promo. Soldes été 2026 probables chez Boulanger/Fnac. Prix bas observés en déstockage CDiscount ou marketplace.",
         "trend": "baisse",
         "confidence": 38
+      },
+      {
+        "date": "2026-08-09",
+        "typical": 779,
+        "low": 699,
+        "notes": "Modèle très diffusé sur Darty, Boulanger, Amazon.fr. Promotions fréquentes -10% à -15%. Prix bas possible en déstockage marketplace ou offre Fnac adhérent.",
+        "trend": "baisse légère",
+        "confidence": 42
       }
     ]
   },
@@ -40,6 +64,10 @@
       "2026-08-05": {
         "min": 669,
         "typical": 749
+      },
+      "2026-08-09": {
+        "min": 649,
+        "typical": 739
       }
     },
     "checks": [
@@ -50,6 +78,14 @@
         "notes": "Référence très concurrentielle, régulièrement soldée. Prix plancher fréquent en promo croisée Darty/Boulanger. Tendance légère à la baisse post-soldes été.",
         "trend": "baisse",
         "confidence": 36
+      },
+      {
+        "date": "2026-08-09",
+        "typical": 739,
+        "low": 649,
+        "notes": "Référence bien distribuée, souvent en promo chez Boulanger et Darty. Prix catalogue élevé mais prix réel nettement en dessous. Déstockage fréquent fin été.",
+        "trend": "baisse",
+        "confidence": 40
       }
     ]
   },
@@ -58,6 +94,10 @@
       "2026-08-05": {
         "min": 769,
         "typical": 839
+      },
+      "2026-08-09": {
+        "min": 749,
+        "typical": 829
       }
     },
     "checks": [
@@ -68,6 +108,14 @@
         "notes": "Prix généralement stable chez revendeurs agréés Liebherr. Petites remises possibles en marketplace. Moins promu que les marques grand volume.",
         "trend": "stable",
         "confidence": 33
+      },
+      {
+        "date": "2026-08-09",
+        "typical": 829,
+        "low": 749,
+        "notes": "Prix généralement proche de la cible client. Liebherr peu soldé mais marketplace Amazon peut afficher des prix inférieurs. Tendance stable avec légères variations saisonnières.",
+        "trend": "stable",
+        "confidence": 36
       }
     ]
   },
@@ -76,6 +124,10 @@
       "2026-08-05": {
         "min": 689,
         "typical": 769
+      },
+      "2026-08-09": {
+        "min": 679,
+        "typical": 759
       }
     },
     "checks": [
@@ -86,6 +138,14 @@
         "notes": "Concurrent direct du Bosch Serie 6 (même groupe BSH). Prix alignés entre enseignes. Promos fréquentes en période estivale. CDiscount parfois le moins cher.",
         "trend": "stable",
         "confidence": 35
+      },
+      {
+        "date": "2026-08-09",
+        "typical": 759,
+        "low": 679,
+        "notes": "Concurrent direct du Bosch (même groupe BSH). Prix souvent alignés. Promos régulières sur Darty et CDiscount. Possible offre Fnac adhérent -15%.",
+        "trend": "stable",
+        "confidence": 38
       }
     ]
   },
@@ -94,6 +154,10 @@
       "2026-08-05": {
         "min": 779,
         "typical": 849
+      },
+      "2026-08-09": {
+        "min": 749,
+        "typical": 839
       }
     },
     "checks": [
@@ -104,6 +168,14 @@
         "notes": "Modèle milieu-haut de gamme AEG (groupe Electrolux). Distribution plus sélective, promos moins fréquentes. Prix plancher possible sur Amazon.fr ou Fnac marketplace.",
         "trend": "stable",
         "confidence": 30
+      },
+      {
+        "date": "2026-08-09",
+        "typical": 839,
+        "low": 749,
+        "notes": "Modèle AEG haut de gamme, distribution plus sélective (Darty, Boulanger). Moins de promos agressives que LG ou Bosch. Prix bas possible en fin de série ou marketplace.",
+        "trend": "stable",
+        "confidence": 33
       }
     ]
   }
