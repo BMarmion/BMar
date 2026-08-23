@@ -12,6 +12,10 @@
       "2026-08-16": {
         "min": 949,
         "typical": 1049
+      },
+      "2026-08-23": {
+        "min": 949,
+        "typical": 1049
       }
     },
     "checks": [
@@ -38,6 +42,14 @@
         "notes": "Prix stable autour de 1000-1100 EUR chez les grands enseignes. Déstockage possible sur marketplace Amazon ou Cdiscount autour de 949 EUR. Modèle haut de gamme NoFrost, peu de promos agressives.",
         "trend": "stable",
         "confidence": 35
+      },
+      {
+        "date": "2026-08-23",
+        "typical": 1049,
+        "low": 949,
+        "notes": "Modèle haut de gamme NoFrost BioFresh. Prix stable autour de 1050 EUR chez Darty/Boulanger. Destockage possible sur CDiscount ou marketplace Amazon autour de 949 EUR. Peu de promos agressives sur ce segment.",
+        "trend": "stable",
+        "confidence": 38
       }
     ]
   },
@@ -52,6 +64,10 @@
         "typical": 779
       },
       "2026-08-16": {
+        "min": 699,
+        "typical": 779
+      },
+      "2026-08-23": {
         "min": 699,
         "typical": 779
       }
@@ -80,6 +96,14 @@
         "notes": "Modèle très diffusé, fréquemment en promo sur Boulanger et Fnac. Soldes d'été 2026 peuvent pousser vers 699-720 EUR. Tendance légèrement baissière sur ce segment LG.",
         "trend": "baisse",
         "confidence": 38
+      },
+      {
+        "date": "2026-08-23",
+        "typical": 779,
+        "low": 699,
+        "notes": "Combiné LG très populaire, fréquemment en promo. Boulanger et Fnac pratiquent des remises régulières. Prix marketplace Amazon.fr peut descendre vers 699-720 EUR. Tendance légèrement baissière sur 2026.",
+        "trend": "baisse",
+        "confidence": 42
       }
     ]
   },
@@ -95,6 +119,10 @@
       },
       "2026-08-16": {
         "min": 649,
+        "typical": 749
+      },
+      "2026-08-23": {
+        "min": 669,
         "typical": 749
       }
     },
@@ -122,6 +150,14 @@
         "notes": "Référence très concurrentielle, Darty et Boulanger le bradent régulièrement. Marketplace Cdiscount peut descendre à 649-670 EUR. Période août propice aux déstockages avant rentrée.",
         "trend": "baisse",
         "confidence": 36
+      },
+      {
+        "date": "2026-08-23",
+        "typical": 749,
+        "low": 669,
+        "notes": "Référence stable du marché. Prix souvent autour de 749 EUR chez les grandes enseignes. Promos récurrentes chez Darty et CDiscount pouvant atteindre 669-690 EUR. Modèle bien implanté, prix compétitif.",
+        "trend": "stable",
+        "confidence": 44
       }
     ]
   },
@@ -138,6 +174,10 @@
       "2026-08-16": {
         "min": 769,
         "typical": 849
+      },
+      "2026-08-23": {
+        "min": 769,
+        "typical": 829
       }
     },
     "checks": [
@@ -164,6 +204,14 @@
         "notes": "Prix typique autour de 820-880 EUR. Moins de promos que les marques coréennes ou Bosch/Siemens. Déstockage occasionnel sur Amazon.fr vers 769 EUR. Tendance stable.",
         "trend": "stable",
         "confidence": 32
+      },
+      {
+        "date": "2026-08-23",
+        "typical": 829,
+        "low": 769,
+        "notes": "Entrée de gamme Liebherr NoFrost. Positionnement prix cohérent avec la cible client. Moins de destockage que les marques coréennes. Marketplace peut proposer 769-790 EUR. Tendance stable.",
+        "trend": "stable",
+        "confidence": 36
       }
     ]
   },
@@ -179,6 +227,10 @@
       },
       "2026-08-16": {
         "min": 679,
+        "typical": 769
+      },
+      "2026-08-23": {
+        "min": 689,
         "typical": 769
       }
     },
@@ -206,6 +258,14 @@
         "notes": "Segment iQ300 très disputé. Fnac et Boulanger proposent régulièrement des offres croisées Bosch/Siemens. Marketplace peut descendre à 679 EUR. Légère pression baissière liée à la concurrence.",
         "trend": "baisse",
         "confidence": 34
+      },
+      {
+        "date": "2026-08-23",
+        "typical": 769,
+        "low": 689,
+        "notes": "Siemens iQ300 bien distribué en France. Promos fréquentes chez Boulanger et Fnac. CDiscount et Amazon marketplace proposent régulièrement des prix sous 700 EUR. Légère pression baissière liée à concurrence LG/Bosch.",
+        "trend": "baisse",
+        "confidence": 40
       }
     ]
   },
@@ -221,6 +281,10 @@
       },
       "2026-08-16": {
         "min": 749,
+        "typical": 849
+      },
+      "2026-08-23": {
+        "min": 779,
         "typical": 849
       }
     },
@@ -248,6 +312,14 @@
         "notes": "Modèle AEG CustomFlex, moins diffusé que Bosch/Siemens. Prix autour de 820-900 EUR chez Darty/Boulanger. Déstockage marketplace vers 749 EUR possible. Tendance stable à légèrement baissière.",
         "trend": "stable",
         "confidence": 30
+      },
+      {
+        "date": "2026-08-23",
+        "typical": 849,
+        "low": 779,
+        "notes": "Combiné AEG CustomFlex haut de gamme. Distribution plus sélective, moins de promos agressives. Prix stable autour de 849 EUR chez Darty/Boulanger. Marketplace peut descendre vers 779-800 EUR. Peu de destockage observé.",
+        "trend": "stable",
+        "confidence": 33
       }
     ]
   }
