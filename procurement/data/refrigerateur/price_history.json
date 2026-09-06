@@ -20,6 +20,10 @@
       "2026-08-30": {
         "min": 949,
         "typical": 1049
+      },
+      "2026-09-06": {
+        "min": 949,
+        "typical": 1049
       }
     },
     "checks": [
@@ -62,6 +66,14 @@
         "notes": "Modèle haut de gamme NoFrost BioFresh, prix stable autour de 1050 EUR chez Darty/Boulanger, déstockages ponctuels marketplace Amazon/Cdiscount vers 950 EUR. Légère pression baissière en fin été.",
         "trend": "stable",
         "confidence": 38
+      },
+      {
+        "date": "2026-09-06",
+        "typical": 1049,
+        "low": 949,
+        "notes": "Prix stable autour de 1000-1100 EUR chez les grands retailers. Déstockage possible sur marketplace Amazon ou CDiscount avec reconditionné neuf sous garantie constructeur. Liebherr tient bien ses prix.",
+        "trend": "stable",
+        "confidence": 35
       }
     ]
   },
@@ -84,6 +96,10 @@
         "typical": 779
       },
       "2026-08-30": {
+        "min": 699,
+        "typical": 779
+      },
+      "2026-09-06": {
         "min": 699,
         "typical": 779
       }
@@ -128,6 +144,14 @@
         "notes": "Combiné LG InstaView très populaire, fréquemment en promo sur Fnac/Darty. Prix réel souvent sous la cible, promos récurrentes -10/-15% en fin de saison. Marketplace compétitive.",
         "trend": "baisse",
         "confidence": 40
+      },
+      {
+        "date": "2026-09-06",
+        "typical": 779,
+        "low": 699,
+        "notes": "Modèle très distribué, fréquemment en promo chez Boulanger et Darty. Bon rapport qualité-prix, prix en légère baisse sur 2025-2026 face à la concurrence. Guetter les offres flash.",
+        "trend": "baisse",
+        "confidence": 38
       }
     ]
   },
@@ -152,6 +176,10 @@
       "2026-08-30": {
         "min": 649,
         "typical": 729
+      },
+      "2026-09-06": {
+        "min": 679,
+        "typical": 749
       }
     },
     "checks": [
@@ -194,6 +222,14 @@
         "notes": "Valeur sûre du marché FR, très référencé. Prix en légère baisse structurelle, modèle mature. Promos fréquentes chez Boulanger et Cdiscount, déstockages possibles vers 650 EUR.",
         "trend": "baisse",
         "confidence": 42
+      },
+      {
+        "date": "2026-09-06",
+        "typical": 749,
+        "low": 679,
+        "notes": "Bestseller chez Darty et Fnac, régulièrement soldé. Prix catalogue en baisse progressive depuis mi-2025. Promo saisonnière probable en septembre (rentrée). Forte disponibilité.",
+        "trend": "baisse",
+        "confidence": 40
       }
     ]
   },
@@ -218,6 +254,10 @@
       "2026-08-30": {
         "min": 749,
         "typical": 829
+      },
+      "2026-09-06": {
+        "min": 779,
+        "typical": 849
       }
     },
     "checks": [
@@ -260,6 +300,14 @@
         "notes": "Entrée de gamme NoFrost Liebherr, bien référencé FR. Prix souvent en dessous de la cible annoncée. Concurrence forte avec Bosch/Siemens sur ce segment, tendance légèrement baissière.",
         "trend": "baisse",
         "confidence": 37
+      },
+      {
+        "date": "2026-09-06",
+        "typical": 849,
+        "low": 779,
+        "notes": "Liebherr maintient une politique de prix ferme. Remises rares chez distributeurs officiels, meilleures offres sur CDiscount ou Amazon marketplace. Stable sur 12 mois.",
+        "trend": "stable",
+        "confidence": 33
       }
     ]
   },
@@ -284,6 +332,10 @@
       "2026-08-30": {
         "min": 679,
         "typical": 759
+      },
+      "2026-09-06": {
+        "min": 699,
+        "typical": 769
       }
     },
     "checks": [
@@ -326,6 +378,14 @@
         "notes": "Modèle Siemens iQ300 bien positionné, souvent groupé avec offres Fnac/Darty. Proche du Bosch en technologie (même groupe BSH), prix concurrentiel. Stable avec promos ponctuelles.",
         "trend": "stable",
         "confidence": 39
+      },
+      {
+        "date": "2026-09-06",
+        "typical": 769,
+        "low": 699,
+        "notes": "Groupe BSH (Bosch/Siemens) aligne souvent les promos simultanément. Prix courant légèrement au-dessus du Bosch équivalent. Tendance baisse modérée. Boulanger et Darty principaux distributeurs.",
+        "trend": "baisse",
+        "confidence": 36
       }
     ]
   },
@@ -348,6 +408,10 @@
         "typical": 849
       },
       "2026-08-30": {
+        "min": 769,
+        "typical": 849
+      },
+      "2026-09-06": {
         "min": 769,
         "typical": 849
       }
@@ -392,6 +456,14 @@
         "notes": "AEG CustomFlex haut de gamme Electrolux, moins présent en GMS FR que Bosch/Liebherr. Prix relativement stable, déstockages possibles sur Amazon marketplace. Confiance faible sur disponibilité promo.",
         "trend": "stable",
         "confidence": 33
+      },
+      {
+        "date": "2026-09-06",
+        "typical": 849,
+        "low": 769,
+        "notes": "AEG positionné premium, moins de promos agressives. Distribution plus sélective (Darty, Fnac, Electro Dépôt). Prix relativement stable, légères remises ponctuelles en fin de saison. Confiance limitée faute de données temps réel.",
+        "trend": "stable",
+        "confidence": 30
       }
     ]
   }
