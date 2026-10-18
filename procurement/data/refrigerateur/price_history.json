@@ -44,6 +44,10 @@
       "2026-10-11": {
         "min": 949,
         "typical": 1049
+      },
+      "2026-10-18": {
+        "min": 949,
+        "typical": 1049
       }
     },
     "checks": [
@@ -134,6 +138,14 @@
         "notes": "Prix stable autour de 1000-1100 EUR chez les grands retailers FR. Déstockage possible sur CDiscount ou marketplace Amazon autour de 949 EUR. Modèle haut de gamme NoFrost BioFresh, peu de promos agressives.",
         "trend": "stable",
         "confidence": 35
+      },
+      {
+        "date": "2026-10-18",
+        "typical": 1049,
+        "low": 949,
+        "notes": "Prix stable autour de 1000-1100 EUR chez les grands retailers. Déstockage possible sur marketplace Amazon ou Cdiscount avec remises 8-10%. Modèle premium NoFrost bien ancré dans cette fourchette.",
+        "trend": "stable",
+        "confidence": 35
       }
     ]
   },
@@ -182,6 +194,10 @@
       "2026-10-11": {
         "min": 699,
         "typical": 789
+      },
+      "2026-10-18": {
+        "min": 699,
+        "typical": 779
       }
     },
     "checks": [
@@ -272,6 +288,14 @@
         "notes": "Modèle très vendu, fréquemment en promo chez Boulanger et Darty. Cashback LG récurrent. Prix marketplace Amazon peut descendre vers 699-720 EUR. Tendance légèrement baissière sur 2026.",
         "trend": "baisse",
         "confidence": 38
+      },
+      {
+        "date": "2026-10-18",
+        "typical": 779,
+        "low": 699,
+        "notes": "Modèle très concurrentiel, fréquemment en promo chez Boulanger et Fnac. Tendance légèrement baissière depuis mi-2026, remises régulières -10 à -15%. Surveiller les offres Black Friday approchantes.",
+        "trend": "baisse",
+        "confidence": 38
       }
     ]
   },
@@ -319,6 +343,10 @@
       },
       "2026-10-11": {
         "min": 649,
+        "typical": 749
+      },
+      "2026-10-18": {
+        "min": 669,
         "typical": 749
       }
     },
@@ -410,6 +438,14 @@
         "notes": "Modèle très concurrentiel, souvent soldé. Fnac/Darty pratiquent des promos fréquentes. CDiscount peut afficher 649-670 EUR. Tendance baissière progressive sur la gamme Serie 6 Bosch.",
         "trend": "baisse",
         "confidence": 36
+      },
+      {
+        "date": "2026-10-18",
+        "typical": 749,
+        "low": 669,
+        "notes": "Prix compétitif sur ce segment. Modèle populaire avec rotations fréquentes chez Darty et Boulanger. Promos flash possibles en approche de fin octobre. Légère pression baissière.",
+        "trend": "baisse",
+        "confidence": 36
       }
     ]
   },
@@ -458,6 +494,10 @@
       "2026-10-11": {
         "min": 769,
         "typical": 849
+      },
+      "2026-10-18": {
+        "min": 769,
+        "typical": 829
       }
     },
     "checks": [
@@ -548,6 +588,14 @@
         "notes": "Gamme entrée Pure Liebherr, moins premium que CBNd. Quelques offres déstockage autour de 769-790 EUR sur Amazon marketplace ou CDiscount. Prix globalement stables sur Darty/Boulanger.",
         "trend": "stable",
         "confidence": 33
+      },
+      {
+        "date": "2026-10-18",
+        "typical": 829,
+        "low": 769,
+        "notes": "Positionnement milieu-haut de gamme Liebherr. Prix relativement stables, peu de déstockage agressif sur cette référence. Marketplace peut offrir -5 à -8% occasionnellement.",
+        "trend": "stable",
+        "confidence": 33
       }
     ]
   },
@@ -595,6 +643,10 @@
       },
       "2026-10-11": {
         "min": 679,
+        "typical": 769
+      },
+      "2026-10-18": {
+        "min": 699,
         "typical": 769
       }
     },
@@ -686,6 +738,14 @@
         "notes": "iQ300 milieu de gamme Siemens, souvent aligné avec Bosch Serie 6 (même groupe BSH). Promos croisées fréquentes. Marketplace Amazon ou CDiscount peut descendre à 679-699 EUR. Légère pression baissière.",
         "trend": "baisse",
         "confidence": 34
+      },
+      {
+        "date": "2026-10-18",
+        "typical": 769,
+        "low": 699,
+        "notes": "Concurrent direct du Bosch (même groupe BSH). Prix alignés, promotions souvent synchronisées. Tendance stable à légèrement baissière. Cdiscount et Amazon proposent parfois des offres vendeurs tiers.",
+        "trend": "stable",
+        "confidence": 34
       }
     ]
   },
@@ -733,6 +793,10 @@
       },
       "2026-10-11": {
         "min": 749,
+        "typical": 839
+      },
+      "2026-10-18": {
+        "min": 779,
         "typical": 839
       }
     },
@@ -824,6 +888,14 @@
         "notes": "Modèle AEG CustomFlex, bien positionné. Electrolux Group, promos moins fréquentes que BSH. Boulanger et Darty principal canal. Prix bas possible en déstockage ou Black Friday anticipé autour de 749-770 EUR.",
         "trend": "stable",
         "confidence": 32
+      },
+      {
+        "date": "2026-10-18",
+        "typical": 839,
+        "low": 779,
+        "notes": "Modèle haut de gamme AEG (groupe Electrolux). Prix généralement tenus, remises modérées. Possible promo Fnac ou Darty en période automnale. Moins de pression concurrentielle que LG/Bosch.",
+        "trend": "stable",
+        "confidence": 30
       }
     ]
   }
