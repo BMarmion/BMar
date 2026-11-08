@@ -56,6 +56,10 @@
       "2026-11-01": {
         "min": 949,
         "typical": 1049
+      },
+      "2026-11-08": {
+        "min": 949,
+        "typical": 1049
       }
     },
     "checks": [
@@ -170,6 +174,14 @@
         "notes": "Prix stable autour de 1000-1100 EUR sur les grandes enseignes. Déstockage possible sur marketplace Amazon ou CDiscount avec -10% à -15%. Liebherr peu bradé, remises rares.",
         "trend": "stable",
         "confidence": 35
+      },
+      {
+        "date": "2026-11-08",
+        "typical": 1049,
+        "low": 949,
+        "notes": "Prix stable autour de 1000-1100 EUR chez les grands retailers. Destockage possible sur marketplace Amazon ou Cdiscount avec quelques dizaines d'euros de remise. Pas de promo majeure nationale connue.",
+        "trend": "stable",
+        "confidence": 35
       }
     ]
   },
@@ -230,6 +242,10 @@
       "2026-11-01": {
         "min": 699,
         "typical": 789
+      },
+      "2026-11-08": {
+        "min": 699,
+        "typical": 779
       }
     },
     "checks": [
@@ -344,6 +360,14 @@
         "notes": "Modèle très diffusé sur Boulanger, Darty, Fnac. Promos fréquentes, notamment autour du Black Friday. Prix réel souvent en dessous du prix catalogue. Tendance légèrement baissière sur 2026.",
         "trend": "baisse",
         "confidence": 40
+      },
+      {
+        "date": "2026-11-08",
+        "typical": 779,
+        "low": 699,
+        "notes": "Modèle bien distribué, fréquemment en promo chez Boulanger et Darty. Tendance légèrement baissière sur 12 mois, remises régulières de 50-100 EUR lors des périodes commerciales.",
+        "trend": "baisse",
+        "confidence": 40
       }
     ]
   },
@@ -402,6 +426,10 @@
         "typical": 729
       },
       "2026-11-01": {
+        "min": 649,
+        "typical": 749
+      },
+      "2026-11-08": {
         "min": 649,
         "typical": 749
       }
@@ -518,6 +546,14 @@
         "notes": "Modèle bien distribué, concurrence forte sur le segment. Promos régulières chez Boulanger et CDiscount. Prix observés en légère baisse depuis mi-2026. Marketplace parfois sous les 650 EUR.",
         "trend": "baisse",
         "confidence": 38
+      },
+      {
+        "date": "2026-11-08",
+        "typical": 749,
+        "low": 649,
+        "notes": "Prix compétitif, modèle courant avec forte concurrence entre enseignes. Remises fréquentes, destockage possible sur Cdiscount ou marketplace Fnac. Tendance globale stable à légèrement baissière.",
+        "trend": "stable",
+        "confidence": 40
       }
     ]
   },
@@ -576,6 +612,10 @@
         "typical": 849
       },
       "2026-11-01": {
+        "min": 779,
+        "typical": 849
+      },
+      "2026-11-08": {
         "min": 779,
         "typical": 849
       }
@@ -692,6 +732,14 @@
         "notes": "Tarif globalement stable sur les enseignes premium. Liebherr maintient ses prix avec peu de promotions agressives. Légères remises possibles en fin d'année sur marketplace.",
         "trend": "stable",
         "confidence": 33
+      },
+      {
+        "date": "2026-11-08",
+        "typical": 849,
+        "low": 779,
+        "notes": "Positionnement milieu-haut de gamme Liebherr. Prix généralement tenus par la marque, peu de promotions agressives. Quelques offres sporadiques sur Amazon marketplace.",
+        "trend": "stable",
+        "confidence": 35
       }
     ]
   },
@@ -751,6 +799,10 @@
       },
       "2026-11-01": {
         "min": 689,
+        "typical": 769
+      },
+      "2026-11-08": {
+        "min": 699,
         "typical": 769
       }
     },
@@ -866,6 +918,14 @@
         "notes": "Siemens iQ300 très présent chez Darty et Fnac. Segment compétitif face à Bosch (même groupe BSH). Promos croisées fréquentes. Prix en légère baisse sur l'année 2026.",
         "trend": "baisse",
         "confidence": 36
+      },
+      {
+        "date": "2026-11-08",
+        "typical": 769,
+        "low": 699,
+        "notes": "Modèle iQ300 bien référencé chez Darty et Boulanger. Prix proches de la cible client. Remises occasionnelles lors des événements commerciaux (Black Friday, soldes). Tendance stable.",
+        "trend": "stable",
+        "confidence": 38
       }
     ]
   },
@@ -926,6 +986,10 @@
       "2026-11-01": {
         "min": 749,
         "typical": 839
+      },
+      "2026-11-08": {
+        "min": 749,
+        "typical": 849
       }
     },
     "checks": [
@@ -1040,6 +1104,14 @@
         "notes": "AEG positionné haut de gamme, distribution plus sélective. Promos ponctuelles sur Boulanger et Amazon. Tendance stable avec quelques déstockages marketplace sous les 800 EUR possibles fin 2026.",
         "trend": "stable",
         "confidence": 30
+      },
+      {
+        "date": "2026-11-08",
+        "typical": 849,
+        "low": 749,
+        "notes": "AEG positionné premium, distribution plus sélective. Prix catalogue généralement respecté, remises possibles sur Cdiscount ou en fin de série. Moins de visibilité promo que LG ou Bosch.",
+        "trend": "stable",
+        "confidence": 32
       }
     ]
   }
